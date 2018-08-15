@@ -9,7 +9,7 @@
 \arguments{
 \item{object}{an object of class mumm.}
 
-\item{parm}{a vector of names specifying which parameters to compute confidence intervals for. If missing,
+\item{parm}{a vector of parameter names or a matrix, where the rows specify linear combinations of the model parameters. If missing,
 confidence intervals will be computed for all of the fixed effect parameters and all of the variance components.}
 
 \item{level}{the confidence level.}
@@ -18,11 +18,11 @@ confidence intervals will be computed for all of the fixed effect parameters and
 }
 \value{
 A matrix with the first column showing the lower confidence limit and the second column showing the
-upper limit for each parameter.
+upper limit for each parameter or linear combination of parameters.
 }
 \description{
 Computes confidence intervals for the fixed effect parameters and the variance components
-in a fitted multiplicative mixed model.
+for an object of class \code{mumm}.
 }
 \details{
 The confidence intervals are computed by the profile likelihood method.
